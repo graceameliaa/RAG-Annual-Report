@@ -1,5 +1,3 @@
-# RAG-Annual-Report
-
 # RAG Chatbot for Complex Financial Reports
 This project is an advanced Retrieval-Augmented Generation (RAG) pipeline designed to answer questions about a 588-page, real-world corporate annual report.
 
