@@ -51,8 +51,8 @@ Here is your text formatted in GitHub Flavored Markdown (GFM), with inline code 
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/YourUsername/Grace-RAG-Annual-Report.git
-    cd Grace-RAG-Annual-Report
+    git clone https://github.com/YourUsername/RAG-Annual-Report.git
+    cd RAG-Annual-Report
     ```
 
 2.  **Create and activate a virtual environment:**
