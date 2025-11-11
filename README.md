@@ -11,34 +11,3 @@ This project solves that by implementing a layout-aware ingestion and a retrieve
 ## RAG Pipeline
 This diagram shows the two-stage process I built: a one-time "Ingestion" pipeline and a real-time "Retrieval" pipeline.
 
-
-```mermaid
-graph TD
-    subgraph "Ingestion Pipeline (Offline)"
-        direction TB
-        A[PDF Report (588 pages)] --> B(pymupdf4llm);
-        B --> C[Markdown Text];
-        C --> D(MarkdownTextSplitter);
-        D --> E[Semantic Chunks (w/ Tables)];
-        E --> F(HuggingFace Embeddings);
-        F --> G[Vectors];
-        G --> H[(ChromaDB)];
-    end
-
-    subgraph "Retrieval Pipeline (Online)"
-        direction TB
-        I[User Query] --> J(HuggingFace Embeddings);
-        J --> K[Query Vector];
-        K --> L[(ChromaDB)];
-        L -- "1. Retrieve Top 25 Candidates" --> M[25 Chunks];
-        
-        M --> N(CrossEncoder Reranker);
-        I --> N;
-        N -- "2. Rerank for Relevance" --> O[Top 5 Chunks];
-        
-        O --> P{Prompt Template};
-        I --> P;
-        P -- "Final Context + Query" --> Q(Ollama - Mistral);
-        Q --> R[Final Answer];
-    end
-```
