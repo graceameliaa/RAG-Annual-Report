@@ -1,4 +1,4 @@
-# 📊 RAG Chatbot for Complex Financial Reports
+# 🤖 RAG Chatbot for Complex Financial Reports 📊
 This project is an advanced Retrieval-Augmented Generation (RAG) pipeline designed to answer questions about a 588-page, real-world corporate annual report.
 
 Unlike simple RAG tutorials that use plain text, this project is built to handle the "messy" reality of complex documents, including embedded tables, multi-column layouts, and semantic headings.
