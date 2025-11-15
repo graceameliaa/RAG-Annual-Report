@@ -14,7 +14,7 @@ This project solves that by implementing a layout-aware ingestion and a retrieve
 
 ## 🔑 Key Features
 
-1.  **Layout-Aware PDF Parsing:** Uses `pymupdf4llm` to convert the entire 588-page PDF into clean Markdown. This preserves all tables, lists, and headers, allowing the LLM to read financial data correctly.
+1.  **Layout-Aware PDF Parsing:** Uses `pymupdf4llm` to convert the entire PDF into clean Markdown. This preserves all tables, lists, and headers, allowing the LLM to read financial data correctly.
 
 2.  **Structure-Aware Chunking:** Employs a `MarkdownTextSplitter` to create semantic chunks based on the document's structure, keeping headers and their associated text (or entire tables) together.
 
